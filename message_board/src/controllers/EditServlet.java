@@ -29,9 +29,14 @@ public class EditServlet extends HttpServlet {
         // メッセージ情報とセッションIDをリクエストスコープに登録
         request.setAttribute("message", m);
         request.setAttribute("_token", request.getSession().getId());
+        
+        
 
+        
         // メッセージIDをセッションスコープに登録
+        if(m != null) {
         request.getSession().setAttribute("message_id", m.getId());
+        }
 
         var rd = request.getRequestDispatcher("/WEB-INF/views/messages/edit.jsp");
         rd.forward(request, response);
