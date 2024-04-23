@@ -6,10 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.Timestamp;
-import javax.persistence.EntityManager;
 import models.Message;
-import utils.DBUtil;
 
 /**
  * Servlet implementation class NewServlet
